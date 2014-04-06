@@ -2,12 +2,12 @@
 
    这个小程序，是为了控制树莓派播放网络上的音乐而写的，它通过获取豆瓣电台上的音乐的实际地址来播放。
    
- ## 安装依赖
+## 安装依赖
    首先你要装python ，然后是tornado 这是python写的一个web框架。最后是需要一个支持网络地址的mp3播放器，我用的是mpg123。
 
     sudo apt-get install python python-tornado mpg123
 
- ## 文件说明
+## 文件说明
 
   index.py     这个文件就是网站的主要逻辑。
 
