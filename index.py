@@ -25,6 +25,7 @@ class MainHandler(tornado.web.RequestHandler):
         else:
             self.render("index.html", err_msg = None, songs = playlist["song"])
 
+
 class AboutHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("about.html")
