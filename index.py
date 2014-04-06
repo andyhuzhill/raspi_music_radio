@@ -48,7 +48,8 @@ class MainHandler(tornado.web.RequestHandler):
             playlist = getPlayList("1", g_opener)
             i = 1
         success, song, child = playSongOfList(playlist, i)
-        self.render("index.html", songs=playlist['song'], imgsrc= song['picture'], songtitle=song['title'], singer=song['artist']) 
+        if success:
+            self.render("index.html", songs=playlist['song'], imgsrc= song['picture'], songtitle=song['title'], singer=song['artist']) 
 
 
 class AboutHandler(tornado.web.RequestHandler):

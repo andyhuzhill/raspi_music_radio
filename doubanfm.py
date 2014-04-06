@@ -7,7 +7,7 @@
 #
 #  Description  : This program play the online 
 #                 music on douban.com
-#  Revision     : 1.0
+#  Revision     : 2.0
 #
 # =============================================
 
@@ -16,7 +16,6 @@ import urllib
 import json
 import sys
 import os
-import ConfigParser
 from cookielib import CookieJar
 import subprocess
 
@@ -89,7 +88,6 @@ def SignIn(username, passwd, verifycode_id, verifycode):
         print('Login success!')
         return True, opener
 
-
 def getListLength(playlist):
     cnt = 0
     for item in playlist:
@@ -109,7 +107,6 @@ def playSongOfList(playlist, num=0):
         return False, None, None
     else:
         song = getNItemOfList(playlist['song'], num) 
-        print song
         try:
             child.kill()
             child = subprocess.Popen(['mpg123', song['url']])
@@ -140,11 +137,10 @@ def play(channel='0', opener=None):
             os.system(cmd)
 
 
-
 def main(argv):
     channel = '1'
-    user = 'andyhuzhill@gmail.com'
-    password = 'huZHIll!2#4'
+    user = ''
+    password = ''
 
     try:
         channel = argv[1]
