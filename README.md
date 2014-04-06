@@ -22,5 +22,7 @@
 
    虽然，这个程序写的很矬，功能也很简单，但是还是要弄个授权协议吧。
    本程序使用的GPL 版权协议，具体的协议内容可以在下面这个网址找到:
-   [](https://www.gnu.org/copyleft/gpl.html)
+   [https://www.gnu.org/copyleft/gpl.html](https://www.gnu.org/copyleft/gpl.html)
     简单的说就是，你可以使用本程序，你也可以自由修改本程序，但是你所做的修改也必须向他人公开，能让他人自由获得。 如果你真的有修改本程序，并且改进了它，我会非常高兴的。
+
+   本程序中使用到了Bootstrap的框架，该框架使用的许可证是 Apache 2 版权归 Twitter所有，完整的说明请参考bootstrap官方网站。
