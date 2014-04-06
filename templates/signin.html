@@ -10,14 +10,14 @@
 
 {% block body %}
 
-<div class= "navbar navbar-inverse navbar-fixed-top" role="naviation">
+<div class= "navbar navbar-inverse " role="naviation">
     <div class = "container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
                 data-target=".navbar-collapse">
-                <span class="sr-only"> Toggle navigation </span>
-                <span class="icon-bar"> </span>
-                <span class="icon-bar"> </span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <a class = "navbar-brand" href="/"> 小派的音乐电台 </a>
         </div>
@@ -33,13 +33,12 @@
 
 <div class = "container">
 
-    <form class="form-signin" role="form">
-        <h2 class="form-signin-heading"> 请登陆 </h2>
-        <input type="text" class="form-control" placeholder="电子邮箱地址" required autofocus>
-        <input type="password" class="form-control" plasceholder="密码" required>
-        <label class="checkbox">
-            <input type="checkbox" value="rememble me"> 记住我
-        </label>
+    <form class="form-signin" role="form" method="POST">
+        <h2 class="form-signin-heading"> 使用您自己的豆瓣帐号登陆 </h2>
+        <input name="user" type="text" class="form-control" placeholder="豆瓣帐号" required autofocus>
+        <input name="passwd" type="password" class="form-control" plasceholder="密码" required>
+        <img src="/static/verify_code.jpg">
+        <input name="verifycode" type="text" class="form-control" plasceholder="验证码" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登陆</button>
     </form>
 

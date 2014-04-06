@@ -4,14 +4,14 @@
 
 {% block body %}
 
-<div class= "navbar navbar-inverse navbar-fixed-top" role="naviation">
+<div class= "navbar navbar-inverse " role="naviation">
     <div class = "container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
                 data-target=".navbar-collapse">
-                <span class="sr-only"> Toggle navigation </span>
-                <span class="icon-bar"> </span>
-                <span class="icon-bar"> </span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <a class = "navbar-brand" href="/"> 小派的音乐电台 </a>
         </div>
@@ -25,28 +25,35 @@
     </div>
 </div>
 
-<div class = "container">
+<div class = "wrap-all"> 
 
-    {% if err_msg == None %}
+    <div class="container">
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <table class="table table-stripped table-bordered">
-        <tr> <td> 歌名 </td> <td> 歌手名 </td> </tr>
-        {% for song in songs %}
-        <tr> <td> {{ song['title'] }} </td><td> {{ song['artist'] }} </td></tr>
-        {% end %}
+        <h3>当前播放歌曲:</h3><br/>
+        <img src="{{ imgsrc }}"> 
+        <ul>
+            <h4><li> 歌曲名：{{ songtitle }}   </h4>
+            <h4><li> 歌手：  {{ singer }}  </h4>
+        </ul>
 
-    </table>
-        
-    {% else %}
-        
-        <h2> {{ err_msg }} </h2>
+        <div class="index-banner-action">
+            <form action="/" method="POST">
+                <button class="btn btn-success btn-lg" type="submit"> 
+                    下一首歌曲
+                </button>
+            </form>
+        </div>
 
-    {% end %}
+        <h4>  当前播放列表 </h4><br/>
+        <table class="table table-stripped table-bordered">
+            <tr> <td> <strong>歌名</strong> </td> <td><strong> 歌手名 </strong></td> </tr>
+            {% for song in songs %}
+            <tr> <td> {{ song['title'] }} </td><td> {{ song['artist'] }} </td></tr>
+            {% end %}
+
+        </table>
+
+    </div>
 
 </div>
 
